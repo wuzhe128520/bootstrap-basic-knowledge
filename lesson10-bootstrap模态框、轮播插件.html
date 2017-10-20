@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap导航</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="asserts/bootstrap3.3.7/css/bootstrap.min.css">
+    <style>
+      html,body {
+        height: 10000px;
+      }
+      .content>div {
+          height: 200px;
+          border: 1px solid red;
+      }
+    </style>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+      <!--模态框 begin-->
+      <!--模态声明层-->
+      <div class="modal fade" id="myModal" tabindex="-1">
+          <!--窗口声明层-->
+          <div class="modal-dialog modal-lg">
+              <!--内容层-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button class="close" data-dismiss="modal">&times;</button>
+                      <h2 class="modal-title">模态框标题</h2>
+                  </div>
+                  <div class="modal-body">模态框内容主体</div>
+                  <div class="modal-footer">模态框底部</div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="myModal2" tabindex="-1">
+          <!--窗口声明层-->
+          <div class="modal-dialog modal-lg">
+              <!--内容层-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button class="close" data-dismiss="modal">&times;</button>
+                      <h2 class="modal-title">模态框标题</h2>
+                  </div>
+                  <div class="modal-body">
+                      <div class="container-fluid">
+                          <div class="row">
+                              <div class="col-md-4">模态框里的流式布局</div>
+                              <div class="col-md-4">模态框里的流式布局</div>
+                              <div class="col-md-4">模态框里的流式布局</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">模态框底部</div>
+              </div>
+          </div>
+      </div>
+
+      <div class="modal fade" id="myModal3" tabindex="-1">
+          <!--窗口声明层-->
+          <div class="modal-dialog modal-lg">
+              <!--内容层-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button class="close" data-dismiss="modal">&times;</button>
+                      <h2 class="modal-title">模态框标题</h2>
+                  </div>
+                  <div class="modal-body">
+                      <div class="container-fluid">
+                          <div class="row">
+                              <div class="col-md-4">模态框里的流式布局</div>
+                              <div class="col-md-4">模态框里的流式布局</div>
+                              <div class="col-md-4">模态框里的流式布局</div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">模态框底部</div>
+              </div>
+          </div>
+      </div>
+    
+      <!--data-target="#myModal"-->
+      <button class="btn btn-default" id="btn01"  data-toggle="modal" data-keyboard="true">点击弹模态框01</button>
+      <button data-target="#myModal2" data-keyboard="true" data-toggle="modal" class="btn btn-default">模态框2</button>
+      <button id="btn3">模态框3</button>
+      <!--模态框 end-->
+
+      <!--轮播图  begin-->
+      <div class="carousel" id="myCarousel">
+          <div class="carousel-inner">
+              <div class="item active">
+                  <img src="img/fc.jpg" alt="">
+                  <div class="carousel-caption">
+                      <h3>first slide</h3>
+                      <p>说明一</p>
+                  </div>
+              </div>
+              <div class="item">
+                  <img src="img/girl.jpg" alt="">
+                  <div class="carousel-caption">
+                      <h3>second slide</h3>
+                      <p>说明二</p>
+                  </div>
+              </div>
+              <div class="item">
+                  <img src="img/zl.jpg" alt="">
+                  <div class="carousel-caption">
+                      <h3>third slide</h3>
+                      <p>说明三</p>
+                  </div>
+              </div>
+          </div>
+          <ul class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ul>
+          <a href="" data-target="#myCarousel" class="carousel-control left" data-slide="prev">&lt;</a>
+          <a href="" data-target="#myCarousel" class="carousel-control right" data-slide="next">&gt;</a>
+      </div>
+
+      <div class="carousel" id="carousel">
+          <div class="carousel-inner">
+              <div class="item active">
+                  <img src="img/fc.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="img/girl.jpg" alt="">
+              </div>
+              <div class="item">
+                  <img src="img/zl.jpg" alt="">
+              </div>
+          </div>
+          <ul class="carousel-indicators">
+              <li  data-slide-to="0" class="active"></li>
+              <li  data-slide-to="1"></li>
+              <li  data-slide-to="2"></li>
+          </ul>
+          <a href="" class="carousel-control left" id="prev">&lt;</a>
+          <a href=""  class="carousel-control right" id="next" >&gt;</a>
+      </div>
+      <!--轮播图 end-->
+      
+      <script src="asserts/bootstrap3.3.7/js/jquery.min.js"></script>
+      <script src="asserts/bootstrap3.3.7/js/bootstrap.min.js"></script>
+      <script>
+      $("#btn01").click(function() {
+          $("#myModal").modal({
+              backdrop: "true",
+              show: true,
+              keyboard: true,
+          });
+      });
+
+      $("#carousel").carousel({
+          interval: 1000
+      });
+      </script>
+      <hr>
+      note:
+      模态框使用esc退出，需要结合tabindex=-1使用
+  </body>
+</html>

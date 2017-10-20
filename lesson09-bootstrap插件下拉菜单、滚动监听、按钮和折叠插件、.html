@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap导航</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="asserts/bootstrap3.3.7/css/bootstrap.min.css">
+    <style>
+      html,body {
+        height: 10000px;
+      }
+      .content>div {
+          height: 200px;
+          border: 1px solid red;
+      }
+    </style>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div class="dropdown">
+          <button class="btn btn-default" data-toggle="dropdown">dropdown <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+              <li><a href="">html</a></li>
+              <li><a href="">javascript</a></li>
+              <li><a href="">html5</a></li>
+          </ul>
+      </div>
+
+      <!--下拉菜单的分开写法 begin-->
+      <button class="btn btn-default" data-toggle="dropdown" data-target="#dropdown">dropdown <span class="caret"></span></button>
+      <div class="dropdown" id="dropdown">
+          <ul class="dropdown-menu">
+              <li><a href="">html</a></li>
+              <li><a href="">javascript</a></li>
+              <li><a href="">html5</a></li>
+          </ul>
+      </div>
+      <!--下拉菜单的分开写法 end-->
+
+      <!--滚动监听 begin-->
+      <nav class="nav navbar-default">
+          <span class="navbar-brand">潭州教育</span>
+          <ul class="nav navbar-nav">
+              <li><a href="#html">html</a></li>
+              <li><a href="#html5">html5</a></li>
+              <li>
+                  <a href="" data-toggle="dropdown">
+                      javascript
+                      <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#vue">vue</a></li>
+                      <li><a href="#angular">angular</a></li>
+                      <li><a href="#nodejs">nodejs</a></li>
+                  </ul>
+
+              </li>
+          </ul>
+      </nav>
+      <nav class="nav navbar-default" id="nav">
+          <span class="navbar-brand">潭州教育</span>
+          <ul class="nav navbar-nav">
+              <li><a href="#html">html</a></li>
+              <li><a href="#html5">html5</a></li>
+              <li>
+                  <a href="" data-toggle="dropdown">
+                      javascript
+                      <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#vue">vue</a></li>
+                      <li><a href="#angular">angular</a></li>
+                      <li><a href="#nodejs">nodejs</a></li>
+                  </ul>
+
+              </li>
+          </ul>
+      </nav>
+      <div class="content" data-spy="scroll" style="height:300px;overflow: auto;position: relative" data-target="#nav">
+          <div id="html">
+              <h4>html</h4>
+              <p>
+                  您可以使用html来建立自己的web站点。在本教程中，
+                  您将学习如何使用html来创建站点。html很容易学习！
+                  相信您能很快学会它！
+              </p>
+          </div>
+          <div id="html5">
+              <h4>html5</h4>
+              <p>
+                  html5
+              </p>
+          </div>
+          <div id="vue">
+              <h4>vue</h4>
+              <p>
+                 vue
+              </p>
+          </div>
+          <div id="angular">
+              <h4>angular</h4>
+              <p>
+                  angular
+              </p>
+          </div>
+          <div id="nodejs">
+              <h4>nodejs</h4>
+              <p>
+                  nodejs
+              </p>
+          </div>
+      </div>
+
+      <nav class="nav navbar-default" id="nav2">
+          <span class="navbar-brand">潭州教育3</span>
+          <ul class="nav navbar-nav">
+              <li><a href="#html2">html</a></li>
+              <li><a href="#html52">html5</a></li>
+              <li>
+                  <a href="" data-toggle="dropdown">
+                      javascript
+                      <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#vue2">vue</a></li>
+                      <li><a href="#angular2">angular</a></li>
+                      <li><a href="#nodejs2">nodejs</a></li>
+                  </ul>
+
+              </li>
+          </ul>
+      </nav>
+      <div class="content" id="scroll" data-spy="scroll" style="height:300px;overflow: auto;position: relative">
+          <div id="html2">
+              <h4>html</h4>
+              <p>
+                  您可以使用html来建立自己的web站点。在本教程中，
+                  您将学习如何使用html来创建站点。html很容易学习！
+                  相信您能很快学会它！
+              </p>
+          </div>
+          <div id="html52">
+              <h4>html5</h4>
+              <p>
+                  html5
+              </p>
+          </div>
+          <div id="vue2">
+              <h4>vue</h4>
+              <p>
+                  vue
+              </p>
+          </div>
+          <div id="angular2">
+              <h4>angular</h4>
+              <p>
+                  angular
+              </p>
+          </div>
+          <div id="nodejs2">
+              <h4>nodejs</h4>
+              <p>
+                  nodejs
+              </p>
+          </div>
+      </div>
+      <!--滚动监听 end-->
+
+      <!--按钮组件 begin-->
+      <button class="btn btn-primary" data-toggle="btn">button</button>
+      <hr>
+      <button id="myButton" class="btn btn-default" data-aaa-text="Loading...">加载数据</button>
+
+      <div class="btn-group" data-toggle="buttons">
+          <label for="" class="btn btn-primary active">
+              <input type="radio" name="sex">男
+          </label>
+          <label for="" class="btn btn-primary">
+              <input type="radio" name="sex">女
+          </label>
+      </div>
+
+      <div class="btn-group" data-toggle="buttons">
+          <label for="" class="btn btn-primary">
+              <input type="checkbox" name="ch">音乐
+          </label>
+          <label for=""  class="btn btn-primary">
+              <input type="checkbox" name="ch">舞蹈
+          </label>
+          <label for=""  class="btn btn-primary">
+              <input type="checkbox" name="ch">话剧
+          </label>
+          <label for=""  class="btn btn-primary">
+              <input type="checkbox" name="ch">爬山
+          </label>
+          <label for=""  class="btn btn-primary">
+              <input type="checkbox" name="ch">游戏
+          </label>
+      </div>
+      <!--按钮组件 end-->
+
+      <!--折叠组件 begin-->
+      <hr>
+      <button class="btn btn-primary" data-toggle="collapse" data-target="#cols">折叠组件</button>
+      <div class="collapse" id="cols">
+          <div class="well">
+              三月，醉一场青春的流年。慢步在三月的春光里，走走停停，看花开嫣然，看春雨绵绵，感受春风拂面，春天，就是青春的流年。青春，是人生中最美的风景。青春，是一场花开的遇见；青春，是一场痛并快乐着的旅行；青春，是一场轰轰烈烈的比赛；青春，是一场鲜衣奴马的争荣岁月；青春，是一场风花雪月的光阴。
+          </div>
+      </div>
+
+      <!--手风琴 begin-->
+      <div class="panel-group" id="accordion">
+          <div class="panel panel-default">
+              <div class="panel-heading" id="headingOne">
+                  <div class="panel-title">
+                      <a href="#collapseOne" data-toggle="collapse" data-parent="#accordion">
+                          collapsible one
+                      </a>
+                  </div>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                  <div class="panel-body">
+                      青春往事，多么甜蜜；青春岁月，多么靓丽；青春流年，如火如荼。青春里，我们向着梦想前进。跌倒过，伤心过，快乐过，痛苦过，孤独过，彷徨过，迷茫过。总是，在悠悠的岁月中徘徊；总是，在如春的生命中成长；总是，在季节的交替中感悟人生四季的美妙与韵律；总是，在多愁善感中体悟青春的美好与无奈。
+                  </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" id="headingTwo">
+                  <div class="panel-title">
+                      <a href="#collapseTwo" data-toggle="collapse" data-parent="#accordion">
+                          collapsible two
+                      </a>
+                  </div>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      三月的鲜花，一树树，一束束，一簇簇，而青春，就是像三月的鲜花一样美丽迷人，生机盎然，姹紫嫣红，生机勃勃。三月，是青春里最美最温暖的风景。三月的美，就像青春的美，充满活力，充满生机，充满昂扬的斗志。三月的美，就像青春的花季，在那里我们可以感受青春的跳动与感动，感受青春的曼妙与奇妙；感受青春的悸动与心跳。
+                  </div>
+              </div>
+          </div>
+          <div class="panel panel-default">
+              <div class="panel-heading" id="headingThree">
+                  <div class="panel-title">
+                      <a href="#collapseThree" data-toggle="collapse" data-parent="#accordion">
+                          collapsible three
+                      </a>
+                  </div>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      青春，如三月的春光，安暖向阳。在美丽的青春年华，我们手牵手，肩并肩，跨过岁月山河，跨过锦瑟流年，跨过天涯海角，在三月的春光里沐浴金色的光泽。三月的春光，让青春的我们看到希望，看到自己有一颗年轻跳动的心，看到蓝天白云，看到明媚的灿烂。三月的春光，温暖无比，就像我们的青春，有着长辈的呵护，有着老师的循循教导，它们就像春光，照耀着我们年轻的心。
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--手风琴 end-->
+
+      <button class="btn btn-primary" id="btn" data-target="#myCollapse2">js折叠组件</button>
+      <div class="collapse" id="myCollapse2">
+          <div class="well">
+              三月，醉一场青春的流年。人生的三月，我们正值青春，风华正茂。在这样一个充满活力的年纪，我们要把握机遇，朝人生的巅峰冲刺；我们要珍惜每一个让我们流连忘返的风景，保持年青的心态，随时准备着与时间赛跑；我们要在时光深处，保持一种淡然而洒脱，矜持而深情的微笑，让三月的风景陪我们笑语盈盈，清芬一路。
+          </div>
+      </div>
+
+      <!--折叠组件 end-->
+      <script src="asserts/bootstrap3.3.7/js/jquery.min.js"></script>
+      <script src="asserts/bootstrap3.3.7/js/bootstrap.min.js"></script>
+      <script>
+          $("#scroll").scrollspy({
+              target: "#nav2"
+          });
+          $("#myButton").on("click", function() {
+              var btn = $(this).button("aaa");
+              setTimeout(function() {
+                  btn.button("reset");
+              }, 1000);
+          });
+          $("#btn").on("click", function() {
+              $("#myCollapse2").collapse("toggle");
+          });
+      </script>
+
+      <hr>
+      note:
+      1、下拉菜单一般是使用data-toggle来设置；使用js配置达不到效果
+  </body>
+</html>

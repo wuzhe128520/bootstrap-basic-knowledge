@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap导航</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="asserts/bootstrap3.3.7/css/bootstrap.min.css">
+    <style>
+      html,body {
+        height: 10000px;
+      }
+    </style>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <ul class="nav nav-tabs navbar-fixed-top">
+        <li class="active"><a href="" data-toggle="tab">html01</a></li>
+        <li><a href="" data-toggle="tab">html02</a></li>
+        <li><a href="" data-toggle="tab">html03</a></li>
+        <li><a href="" data-toggle="tab">html04</a></li>
+        <li><a href="" data-toggle="tab">html05</a></li>
+        <li><a href="" data-toggle="tab">html06</a></li>
+      </ul>
+      <ul class="nav nav-pills" style="margin-top: 100px;">
+        <li class="active"><a href="" data-toggle="tab">html01</a></li>
+        <li><a href="" data-toggle="tab">html02</a></li>
+        <li><a href="" data-toggle="tab">html03</a></li>
+        <li><a href="" data-toggle="tab">html04</a></li>
+        <li><a href="" data-toggle="tab">html05</a></li>
+        <li><a href="" data-toggle="tab">html06</a></li>
+      </ul>
+
+      <!--垂直导航-->
+      <ul class="nav nav-pills nav-stacked" style="margin-top: 100px;">
+        <li class="active"><a href="" data-toggle="tab">html01</a></li>
+        <li><a href="" data-toggle="tab">html02</a></li>
+        <li><a href="" data-toggle="tab">html03</a></li>
+        <li><a href="" data-toggle="tab">html04</a></li>
+        <li><a href="" data-toggle="tab">html05</a></li>
+        <li><a href="" data-toggle="tab">html06</a></li>
+      </ul>
+
+      <!--两端对齐-->
+      <ul class="nav nav-pills nav-justified" style="margin-top: 100px;">
+        <li class="active"><a href="" data-toggle="tab">html01</a></li>
+        <li><a href="" data-toggle="tab">html02</a></li>
+        <li class="disabled"><a href="">html03</a></li>
+        <li><a href="" data-toggle="tab">html04</a></li>
+        <li><a href="" data-toggle="tab">html05</a></li>
+        <li><a href="" data-toggle="tab">html06</a></li>
+      </ul>
+
+      <!---->
+      <ul class="nav nav-pills" style="margin-top: 100px;">
+        <li class="active"><a href="" data-toggle="tab">html01</a></li>
+        <li><a href="" data-toggle="tab">html02</a></li>
+        <li class="disabled"><a href="">html03</a></li>
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">dropdown <i class="caret"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="" data-toggle="tab">我的空间</a></li>
+                <li><a href="" data-toggle="tab">我的说说</a></li>
+                <li><a href="" data-toggle="tab">留言板</a></li>
+              </ul>
+        </li>
+        <li><a href="" data-toggle="tab">html05</a></li>
+        <li><a href="" data-toggle="tab">html06</a></li>
+      </ul>
+
+      <!--响应式导航栏 begin-->
+      <nav class="nav navbar-default">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-toggle="collapse" data-target="#myCollapsel">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="" class="navbar-brand">前端爱我</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myCollapsel">
+          <ul class="nav navbar-nav">
+            <li><a href="">html</a></li>
+            <li><a href="">javascript</a></li>
+            <li><a href="">css3</a></li>
+          </ul>
+          <div class="navbar-left">
+            <form action="" class="navbar-form">
+              <div class="form-group">
+                <input type="text" placeholder="search" class="form-control">
+                <input type="submit" value="search" class="btn btn-default">
+              </div>
+            </form>
+          </div>
+          <input type="submit" class="btn btn-default navbar-btn" value="submit">
+          <p class="navbar-text">前端网</p>
+        </div>
+      </nav>
+      <div>
+        <p>前端爱我</p>
+        <p>前端爱我</p>
+        <p>前端爱我</p>
+        <p>前端爱我</p>
+        <p>前端爱我</p>
+      </div>
+      <!--响应式导航栏 end-->
+      <!--面包屑导航  begin-->
+      <ul class="breadcrumb">
+        <li><a href="">首页</a></li>
+        <li><a href="">列表页</a></li>
+        <li class="active">详情页</li>
+      </ul>
+      <!--面包屑导航  end-->
+      <script src="asserts/bootstrap3.3.7/js/jquery.min.js"></script>
+      <script src="asserts/bootstrap3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

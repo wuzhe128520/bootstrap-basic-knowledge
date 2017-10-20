@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap栅格系统和表单</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="asserts/bootstrap3.3.7/css/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style></style>
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4">
+                  col-lg-4
+              </div>
+              <div class="col-lg-4">
+                  col-lg-4
+              </div>
+              <div class="col-lg-4">
+                  col-lg-4
+              </div>
+              <div class="col-md-4 col-sm-6">
+                  col-md-4
+              </div>
+              <div class="col-md-4 col-sm-6">
+                  col-md-4
+              </div>
+              <div class="col-md-4 col-sm-6">
+                  col-md-4
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-4">
+                  col-lg-4
+              </div>
+              <div class="col-lg-4">
+                  col-lg-4
+              </div>
+              <div class="col-lg-4">
+                  col-lg-4
+              </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-5 col-md-offset-3">左偏移3</div>
+              <div class="col-md-5 col-md-push-7" style="background: blue">push7</div>
+              <div class="col-md-7 col-md-pull-5" style="background: red;">pull5</div>
+          </div>
+      </div>
+      <h2>bootstrap表单</h2>
+      <div class="container">
+          <form action="">
+              <div class="form-group">
+                  <label for="">
+                  姓名：
+                  </label>
+                  <input type="text" class="form-control" placeholder="请输入姓名">
+              </div>
+          </form>
+      </div>
+      <div class="container">
+          <form action="">
+              <div class="form-group form-inline">
+                <div class="col-md-3">
+                    <label for="" class="control-label">
+                  姓名：
+                  </label>
+                </div>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" placeholder="请输入姓名">
+                </div>
+              </div>
+              <button class="btn btn-default" type="sumit">提交</button>
+              <button class="btn btn-default" type="reset">重置</button>
+          </form>
+          <form action="" class="form-inline">
+              <div class="checkbox-inline">
+                  <label for="">
+                      <input type="checkbox">唱歌
+                  </label>
+              </div>
+          </form>
+          <form action="">
+              <div class="radio">
+                  <input type="radio" value="男" name="sex">男
+              </div>
+              <div class="radio">
+                  <input type="radio" value="女" name="sex">女
+              </div>
+              <div class="radio-inline">
+                  <input type="radio" name="fav" value="">看直播
+              </div>
+              <div class="radio-inline">
+                   <input type="radio" name="fav" value="">打游戏
+              </div>
+              <div class="radio-inline">
+                  <input type="radio" name="fav" value="">运动
+              </div>
+          </form>
+          <form action="">
+              <select name="" id="" multiple>
+                  <option value="">天门</option>
+                  <option value="" selected>仙桃</option>
+                  <option value="">潜江</option>
+              </select>
+          </form>
+          <form action="">
+              <div class="form-group has-error">
+                  <label for="" class="control-label col-md-2">
+                      姓名：
+                  </label>
+                  <div class="col-md-6">
+                      <input type="text" class="form-control" placeholder="请输入姓名">
+                  </div>
+                  <div class="col-md-4">
+                      <label for="" class="form-control-static">help</label>
+                  </div>
+              </div>
+              <div class="form-group has-success">
+                  <label for="" class="control-label col-md-2">
+                      密码：
+                  </label>
+                  <div class="col-md-6">
+                      <input type="password" class="form-control" placeholder="请输入密码">
+                  </div>
+              </div>
+              <div class="form-group has-warning">
+                  <label for="" class="control-label col-md-2">
+                      姓名：
+                  </label>
+                  <div class="col-md-6">
+                      <input type="text" class="form-control input-sm" placeholder="请输入姓名">
+                  </div>
+                  <div class="col-md-10">
+                      <label for="">help</label>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </body>
+</html>

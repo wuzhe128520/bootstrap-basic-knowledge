@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap辅助类、响应式工具、图标、菜单</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="asserts/bootstrap3.3.7/css/bootstrap.min.css">
+
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">这是占满一行的内容</div>
+          </div>
+      </div>
+
+      <!--三角形-->
+      <div class="caret"></div>
+
+      <div class="bg-warning pull-left">左浮动</div>
+      <div class="bg-warning pull-right">右浮动</div>
+      <div class="center-block text-center bg-info" style="width: 300px;">内容居中</div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-lg- bg-primary">左边内容</div>
+              <button class="col-md-4 bg-info visible-md visible-lg">右侧导航</button>
+          </div>
+      </div>
+      <h2>字体图标</h2>
+      <i class="glyphicon glyphicon-asterisk"></i>
+      <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">dropdown<i class="caret"></i></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu01">
+              <li><a href="">bootstrap001</a></li>
+              <li><a href="">bootstrap002</a></li>
+              <li><a href="">bootstrap003</a></li>
+          </ul>
+      </div>
+      <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">dropdown<i class="caret"></i></button>
+          <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu02">
+              <li><a href="">bootstrap001</a></li>
+              <li><a href="">bootstrap002</a></li>
+              <li><a href="">bootstrap003</a></li>
+              <li class="divider"><a href=""></a></li>
+              <li class="disabled"><a href="">禁止使用</a></li>
+              <li class="disabled"><a href="">html5</a></li>
+          </ul>
+      </div>
+      <div class="dropup">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">dropdown<i class="caret"></i></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu03">
+              <li><a href="">bootstrap001</a></li>
+              <li><a href="">bootstrap002</a></li>
+              <li><a href="">bootstrap003</a></li>
+              <li class="divider"><a href=""></a></li>
+              <li class="disabled"><a href="">禁止使用</a></li>
+              <li><a href="">html5</a></li>
+          </ul>
+      </div>
+      <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+     <!-- <script src="asserts/bootstrap3.3.7/js/jquery.min.js"></script>-->
+      <script src="asserts/bootstrap3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>

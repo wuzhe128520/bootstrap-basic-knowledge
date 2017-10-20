@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap导航</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="asserts/bootstrap3.3.7/css/bootstrap.min.css">
+    <style>
+      html,body {
+        height: 10000px;
+      }
+    </style>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+      <!--弹出框-->
+      <div id="view" style="width: 300px;height: 300px;border: 1px solid red;">
+          <button class="btn btn-primary po" data-toggle="popover" title="弹出框标题" data-content="弹出框的内容">显示/隐藏弹出框</button>
+      </div>
+
+      <!--警告框(属性配置)-->
+      <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <span>您的浏览器不支持！</span>
+      </div>
+
+
+      <div class="alert alert-warning" id="alert">
+          <button type="button" class="close">&times;</button>
+          <span>您的浏览器不支持！</span>
+      </div>
+
+      <ul class="nav nav-tabs" id="tab">
+          <li class="active"><a href="#html" data-toggle="tab">html</a></li>
+          <li><a href="#javascript" data-toggle="tab">javascript</a></li>
+          <li class="dropdown">
+              <a href="" data-toggle="dropdown" class="dropdown-toggle">html5 <i class="caret"></i></a>
+              <ul class="dropdown-menu">
+                  <!--data-toggle="tab"-->
+                  <li><a href="#responsive" >响应式</a></li>
+                 <!-- data-toggle="tab"-->
+                  <li><a href="#html5">html5移动端</a></li>
+              </ul>
+          </li>
+      </ul>
+      <div class="tab-content">
+          <p class="tab-pane active fade in" id="html">html</p>
+          <p class="tab-pane fade" id="javascript">javascript</p>
+          <p class="tab-pane fade" id="html5">html5</p>
+          <p class="tab-pane fade" id="responsive">responsive</p>
+      </div>
+
+      <div class="section">
+          <!--工具提示框 begin-->
+          <a href="" class="tooltip2" title="bootstrap提示文字" rel="tooltip" data-placement="auto left" data-toggle="tooltip">bootstrap</a>
+          <a href="" class="tooltip2" title="bootstrap提示文字" data-placement="auto left" data-toggle="tooltip">bootstrap</a>
+          <!--工具提示框 end-->
+
+          <div class="btn-group">
+              <button class="btn btn-default tp" title="left提示信息">left</button>
+              <button class="btn btn-default tp" title="middle提示信息">middle</button>
+              <button class="btn btn-default tp" title="right提示信息">right</button>
+          </div>
+
+      </div>
+
+      <script src="asserts/bootstrap3.3.7/js/jquery.min.js"></script>
+      <script src="asserts/bootstrap3.3.7/js/bootstrap.min.js"></script>
+      <script>
+
+          //js调用警告框
+          $(".close").on("click", function() {
+              $("#alert").close();
+          });
+
+          $("#alert").on("close.bs.alert", function() {
+              alert('关闭弹出框！');
+          });
+
+
+          //初始化弹出框
+          $(".po").popover('show');
+
+          /*$("button").on("show.bs.popover", function() {
+              alert("show时触发");
+          });
+          $("button").on("shown.bs.popover", function() {
+              alert("显示完成后触发");
+          });*/
+
+          $(".po").on("hide.bs.popover", function() {
+              alert("隐藏时触发");
+          });
+      </script>
+      <script>
+          $("#tab a").on("click", function() {
+              $this = $(this);
+              $this.tab("show");
+          });
+
+          $(".section").tooltip({
+              selector: "[rel='tooltip']",//指定的选择器才显示提示框(使用父级元素调用 tooltip方法)
+          });
+          $(".tp").tooltip({
+              container: "body"  //更改容器为其他更大的容器(以便tooltip提示完整显示)
+          });
+      </script>
+      note:
+      1、工具提示和弹出框插件，需要初始化
+  </body>
+</html>
